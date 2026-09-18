@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#173f38" />
+  <title>DermaTakip | Müşteri Takip Sistemi</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <aside class="sidebar">
+    <a class="brand" href="#"><span class="brand-mark">D</span><span>Derma<span>Takip</span></span></a>
+    <nav aria-label="Ana menü">
+      <a class="nav-item active" href="#dashboard"><span>▦</span> Genel Bakış</a>
+      <a class="nav-item" href="#customers"><span>♙</span> Müşteriler</a>
+      <a class="nav-item" href="#processes"><span>◌</span> İşlem Kayıtları</a>
+      <a class="nav-item" href="#calendar"><span>□</span> Takvim &amp; Takip</a>
+      <a class="nav-item" href="#reports"><span>↗</span> Raporlar</a>
+    </nav>
+    <div class="sidebar-footer"><span class="security-dot"></span> Eczane ağı · Güvenli bağlantı</div>
+  </aside>
+  <main>
+    <header>
+      <div><p class="eyebrow">18 EYLÜL 2026 · CUMA</p><h1>Günaydın, Eczacı Ferit.</h1></div>
+      <div class="header-actions"><button class="icon-button" aria-label="Bildirimler">♢<i></i></button><div class="user"><span>EF</span><div><b>Ferit E.</b><small>Yönetici</small></div></div></div>
+    </header>
+    <section class="overview" id="dashboard">
+      <div class="welcome"><div><p class="eyebrow">DERMOKOZMETİK MÜŞTERİ YÖNETİMİ</p><h2>Bakımı takip edin,<br><em>ilişkiyi</em> güçlendirin.</h2><p>Müşteri profilleri, cilt analizi ve danışmanlık süreçleri tek ekranda.</p><button class="primary" id="newCustomer">+ Yeni müşteri ekle</button></div><div class="leaf-art" aria-hidden="true">❋</div></div>
+      <div class="stats" aria-label="Özet bilgiler">
+        <article><span class="stat-icon">♙</span><p>Toplam müşteri</p><strong>1.248</strong><small class="up">↑ %8,4 <span>bu ay</span></small></article>
+        <article><span class="stat-icon sand">◌</span><p>Bu ay yapılan işlem</p><strong>86</strong><small class="up">↑ %12 <span>geçen aya göre</span></small></article>
+        <article><span class="stat-icon rose">◷</span><p>Bekleyen takip</p><strong>14</strong><small class="warn">● <span>Bugün 5 takip var</span></small></article>
+      </div>
+    </section>
+    <section class="workspace">
+      <div class="section-heading"><div><p class="eyebrow">GÜNCEL KAYITLAR</p><h2>Son işlemler</h2></div><button class="text-button">Tümünü görüntüle <span>→</span></button></div>
+      <div class="content-grid">
+        <div class="panel recent-panel"><div class="table-head"><span>Müşteri</span><span>İşlem</span><span>Tarih</span><span>Takip</span></div><div id="recentList"></div></div>
+        <div class="panel followup-panel"><div class="panel-title"><div><p class="eyebrow">BUGÜN</p><h3>Takip listesi</h3></div><span class="count">5</span></div><div id="followupList"></div><button class="outline">Takvimde görüntüle</button></div>
+      </div>
+    </section>
+  </main>
+  <dialog id="customerDialog"><form method="dialog" id="customerForm"><button class="close" value="cancel" aria-label="Kapat">×</button><p class="eyebrow">YENİ KAYIT</p><h2>Müşteri ekle</h2><label>Ad soyad<input required name="name" placeholder="Örn. Ayşe Yılmaz"></label><label>Telefon<input required name="phone" placeholder="05__ ___ __ __"></label><label>Cilt tipi<select name="skin"><option>Karma</option><option>Kuru</option><option>Yağlı</option><option>Hassas</option></select></label><label>İlk not<textarea name="note" placeholder="İhtiyaç, hassasiyet veya danışmanlık notu"></textarea></label><button class="primary" value="default">Müşteriyi kaydet</button></form></dialog>
+  <script src="app.js"></script>
+</body>
+</html>
