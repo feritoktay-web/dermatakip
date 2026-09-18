@@ -1,0 +1,5 @@
+# Customer data and application secrets must never be committed.
+.env
+data/
+*.db
+*.sqlite
